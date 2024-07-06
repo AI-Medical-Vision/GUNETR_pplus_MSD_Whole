@@ -1,4 +1,4 @@
-# G-UNETR++: Whole & Couinaud liver segmentation
+# G-UNETR++: MSD Whole liver segmentation
 ---
 ![model](./images/model.png)  
   
@@ -45,20 +45,20 @@ GUNETR_pplus_LiTS
 │               ├── Task002_Synapse         
 │                   ├── seg_gt
 │                       ├── test
-│                       ├── segmentation-3.nii
-│                       ├── segmentation-5.nii
-│                       ├── ...
-│                       └── segmentation-127.nii
+│                           ├── hepaticvessel_001.nii.gz
+│                           ├── hepaticvessel_004.nii.gz
+│                           ├── ...
+│                           └── hepaticvessel_455.nii.gz
 │                   ├── unetr_pp_Data_plans_v2.1_stage1
 │                       ├── test
-│                       ├── volume-3.nii
-│                       ├── volume-5.nii
-│                       ├── ...
-│                       └── volume-127.nii
+│                           ├── hepaticvessel_001.nii.gz
+│                           ├── hepaticvessel_004.nii.gz
+│                           ├── ...
+│                           └── hepaticvessel_455.nii.gz
 │                   └── unetr_pp_Plansv2.1_plans_3D.pkl
 ```
 MSD dataset: [link](http://medicaldecathlon.com/).
-> Our LiTS-testset number is `3, 5, 15, 18, 28, 33, 37, 42, 47, 54, 62, 70, 73, 80, 90, 100, 105, 110, 121, and 127`.  
+> Our MSD-testset(50) is `1, 4, 9, 10, 11, 13, 15, 21, 27, 44, 50, 52, 53, 62, 66, 69, 71, 75, 82, 89, 91, 92, 101, 116, 117, 124, 136, 140, 147, 171, 179, 183, 213, 215, 229, 245, 265, 269, 275, 287, 305, 307, 359, 375, 377, 399, 425, 441, 445, 455`.  
   
 ## Model Checkpoint
 ```
@@ -72,23 +72,22 @@ GUNETR_pplus_LiTS
 │                   ├── model_best.model
 │                   └── model_best.model.pkl
 ```
-Whole-liver-chekcpoint: [link](#).  
-Couinaud-checkpoint: [link](#).
+Whole-liver-best chekcpoint: [link](https://drive.google.com/file/d/1f2HWpnDQgyTZMYf810YKldAhw4hEWGKl/view?usp=sharing).  
 
 ---
 # Implementation
-1. Make npy files
+1. Make whole npy files
 ```bash
-$> python LiTS_npy_make.py
+$> python MSD_npy_make.py
 ```
-You select the options, `LiTS`, `3Dircadb`, and `Sliver`.  
+You select the options, `whole`.  
   
 2. Evaluation script
 ```bash
 $> cd ./evaluation_scripts
 $> sh run_evaluation_synapse.sh
 ```
-You select the options, `LiTS`, `3Dircadb`, and `Sliver`.  
+You select the options, `whole`.  
   
 3. Calculation metrics
 Please see our [jupyter notebook](https://github.com/AI-Medical-Vision/GUNETR_pplus_LiTS/blob/main/LiTS_metric.ipynb).  
