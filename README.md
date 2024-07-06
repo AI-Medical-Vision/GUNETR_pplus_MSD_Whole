@@ -76,20 +76,14 @@ Whole-liver-best chekcpoint: [link](https://drive.google.com/file/d/1f2HWpnDQgyT
 
 ---
 # Implementation
-1. Make whole npy files
-```bash
-$> python MSD_npy_make.py
-```
-You select the options, `whole`.  
-  
-2. Evaluation script
+1. Evaluation script
 ```bash
 $> cd ./evaluation_scripts
 $> sh run_evaluation_synapse.sh
 ```
 You select the options, `whole`.  
   
-3. Calculation metrics
+2. Calculation metrics
 Please see our [jupyter notebook](https://github.com/AI-Medical-Vision/GUNETR_pplus_LiTS/blob/main/LiTS_metric.ipynb).  
 We implemented all of metric classes.  
 > You can control post-processing option through `flag_post = True`.
