@@ -90,7 +90,7 @@ $> sh run_evaluation_synapse.sh
 You select the options, `whole`.  
   
 3. Calculation metrics
-Please see our [jupyter notebook](https://github.com/AI-Medical-Vision/GUNETR_pplus_LiTS/blob/main/LiTS_metric.ipynb).  
+Please see our [jupyter notebook](https://github.com/AI-Medical-Vision/GUNETR_pplus_MSD_Whole/blob/main/MSD_metric.ipynb).  
 We implemented all of metric classes.  
 > You can control post-processing option through `flag_post = True`.
   
@@ -99,8 +99,8 @@ We implemented all of metric classes.
 ## MSD
 | Model | DSC | ASSD | MSSD |  
 | --- | --- | --- | --- | 
-| Ours | 0.9752(±0.009) | 0.7700 | 18.1107 | 
-  
+| **Ours (w pp)** | 0.9752(±0.009) | 0.7700 | 18.1107 | 
+| **Ours (w/o pp)** | 0.9753(±0.010) | 1.5421 | 45.0481 | 
 ---
 # References
 [UNETR++](https://arxiv.org/abs/2212.04497)  
