@@ -1,4 +1,4 @@
-# G-UNETR++: Whole liver segmentation
+# G-UNETR++: Whole & Couinaud liver segmentation
 ---
 ![model](./images/model.png)  
   
@@ -33,7 +33,7 @@ pip install -r requirements.txt
   
 ---
 # Dataset
-In paper, we teseted `LiTS`, `3Dircadb`, and `Sliver07`.  
+In paper, we teseted `MSD`.  
   
 ## Dataset format
 ```
@@ -44,26 +44,20 @@ GUNETR_pplus_LiTS
 │           ├── Task02_Synapse           
 │               ├── Task002_Synapse         
 │                   ├── seg_gt
-│                       ├── 3Dircadb
-│                       ├── LiTS
-│                           ├── segmentation-3.nii
-│                           ├── segmentation-5.nii
-│                           ├── ...
-│                           └── segmentation-127.nii
-│                       ├── Sliver07
+│                       ├── test
+│                       ├── segmentation-3.nii
+│                       ├── segmentation-5.nii
+│                       ├── ...
+│                       └── segmentation-127.nii
 │                   ├── unetr_pp_Data_plans_v2.1_stage1
-│                       ├── 3Dircadb
-│                       ├── LiTS
-│                           ├── volume-3.nii
-│                           ├── volume-5.nii
-│                           ├── ...
-│                           └── volume-127.nii
-│                       ├── Sliver07
+│                       ├── test
+│                       ├── volume-3.nii
+│                       ├── volume-5.nii
+│                       ├── ...
+│                       └── volume-127.nii
 │                   └── unetr_pp_Plansv2.1_plans_3D.pkl
 ```
-LiTS dataset: [131 cases](https://github.com/Auggen21/LITS-Challenge?tab=readme-ov-file).  
-3Dircadb link: [20 cases](https://www.ircad.fr/research/data-sets/liver-segmentation-3d-ircadb-01/).  
-Sliver07 link: [20 cases](https://sliver07.grand-challenge.org/).
+MSD dataset: [link](http://medicaldecathlon.com/).
 > Our LiTS-testset number is `3, 5, 15, 18, 28, 33, 37, 42, 47, 54, 62, 70, 73, 80, 90, 100, 105, 110, 121, and 127`.  
   
 ## Model Checkpoint
@@ -78,8 +72,9 @@ GUNETR_pplus_LiTS
 │                   ├── model_best.model
 │                   └── model_best.model.pkl
 ```
-Best-model-chekcpoint: [link](https://drive.google.com/drive/folders/11H3IcizvI180RIrgDSNW7VlFGXL39H7k?usp=drive_link).  
-  
+Whole-liver-chekcpoint: [link](#).  
+Couinaud-checkpoint: [link](#).
+
 ---
 # Implementation
 1. Make npy files
