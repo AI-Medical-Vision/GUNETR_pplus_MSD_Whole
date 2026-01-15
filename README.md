@@ -3,7 +3,7 @@
 ![model](./images/model.png)  
   
 **🔥G-UNETR++: A gradient-enhanced network for accurate and robust liver segmentation from CT images**   
-Paper: [G-UNETR++](#)
+Paper: [G-UNETR++](https://www.mdpi.com/2076-3417/15/2/837)
   
 ---
 # Requirements
